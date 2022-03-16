@@ -1,4 +1,5 @@
 .vscode
+.idea
 .DS_Store
 google-re2/
 foundation/
@@ -16,3 +17,5 @@ tsconfig.json
 lib/scripts/updateBuild.*
 rollup.config.js
 node_modules/
+build_js.sh
+build_js.shbundle_wasm_for_web.js

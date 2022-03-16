@@ -1,6 +1,6 @@
 {
   "name": "@dashevo/wasm-re2",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "RE2 for different platforms (Linux, Windows, macOS)",
   "main": "./lib/scripts/re2.js",
   "types": "./lib/scripts/re2.d.ts",

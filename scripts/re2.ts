@@ -1,5 +1,5 @@
 import { re2Functions } from './reFunctions';
-import { freeUpMemory, getPointers, validate } from './utils';
+import { freeUpMemory, getPointers, validate, translateRegExp, escapeRegExp } from './utils';
 import { EventEmitter } from 'events';
 
 const asyncWrappedRe2Module = require('../../bin/re2Lib');
@@ -21,11 +21,18 @@ export class RE2 {
 
   /**
    * @param regex can not be undefined or null
+   * @param flag
    */
   constructor(regex: string, flag = '') {
+    regex = escapeRegExp(regex);
+
     validate(re2Module, regex);
     this.regex = regex;
-    this.re2 = re2Functions(re2Module, regex, flag);
+    this.re2 = re2Functions(
+      re2Module,
+      translateRegExp(regex, flag === 'm'),
+      flag
+    );
   }
 
   /** Returns number of capture groups. */
