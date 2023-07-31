@@ -5,7 +5,7 @@
   "main": "./lib/scripts/re2.js",
   "types": "./lib/scripts/re2.d.ts",
   "engines": {
-    "node": ">=18"
+    "node": ">=16"
   },
   "jest": {
     "testRegex": ".test\\.js",
